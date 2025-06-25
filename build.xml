@@ -19,6 +19,13 @@
         <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
     </target>
 
+    <target name="compile-partial">
+      <mkdir dir="${classes.dir}"/>
+      <javac srcdir="${src.dir}" destdir="${classes.dir}">
+        <exclude name="com/**"/>
+      </javac>
+    </target>
+
     <target name="release" depends="compile">
     </target>
 
