@@ -1,0 +1,15 @@
+inspecode:
+  tools:
+    coverity:
+      options:
+        --commands:
+        - export REPODIR=$(pwd)
+        - echo $REPODIR
+        - ls -alt $REPODIR
+        - cd $REPODIR/ant
+        - cov-build --dir ~/cov-im --parallel-translate=1 ant
+    fortify:
+      options:
+        --commands:
+        - sourceanalyzer -b build_id ant clean compile-partial
+        --work-dir: .
