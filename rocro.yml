@@ -11,6 +11,5 @@ inspecode:
     fortify:
       options:
         --commands:
-        - cd ant
         - sourceanalyzer -b build_id ant clean compile-partial
         --work-dir: .
