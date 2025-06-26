@@ -5,8 +5,6 @@ inspecode:
       commands:
         - sudo cat ./artifacts_report.json
       artifacts:
-        - path: ./artifacts_report.json
         - path: ./artifacts_result.fpr
       reports:
-        - path: ./artifacts_report.json
         - path: ./artifacts_result.fpr
