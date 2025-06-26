@@ -1,0 +1,134 @@
+{
+  "type" : "Coverity issues",
+  "formatVersion" : 7,
+  "suppressedIssueCount" : 0,
+  "issues" : [
+    {
+      "mergeKey" : "387cc85a126a72be2352b66f77084a74",
+      "occurrenceCountForMK" : 1,
+      "occurrenceNumberInMK" : 1,
+      "referenceOccurrenceCountForMK" : null,
+      "checkerName" : "FORWARD_NULL",
+      "subcategory" : "deref_constant_null",
+      "type" : "null_pointer_dereference_exception",
+      "subtype" : "constant_null",
+      "code-language" : "java",
+      "extra" : "s",
+      "domain" : "STATIC_JAVA",
+      "language" : "Java",
+      "mainEventFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+      "strippedMainEventFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+      "mainEventLineNumber" : 6,
+      "properties" : {},
+      "functionDisplayName" : "oata.HelloWorld.main(java.lang.String[])",
+      "functionMangledName" : "oata.HelloWorld.main(java.lang.String[])",
+      "localStatus" : null,
+      "ordered" : true,
+      "events" : [
+        {
+          "covLStrEventDescription" : "{CovLStrv2{{t{Assigning: {0} {1}= {2}.}{{code{s}}}{}{{code{null}}}}}}",
+          "eventDescription" : "Assigning: \"s\" = \"null\".",
+          "eventNumber" : 1,
+          "eventTreePosition" : "1",
+          "eventSet" : 0,
+          "eventTag" : "assign_zero",
+          "filePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "strippedFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "lineNumber" : 5,
+          "main" : false,
+          "moreInformationId" : null,
+          "remediation" : false,
+          "events" : null
+        },
+        {
+          "covLStrEventDescription" : "{CovLStrv2{{t{Calling a method on null object {0}.}{{code{s}}}}}}",
+          "eventDescription" : "Calling a method on null object \"s\".",
+          "eventNumber" : 2,
+          "eventTreePosition" : "2",
+          "eventSet" : 0,
+          "eventTag" : "null_method_call",
+          "filePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "strippedFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "lineNumber" : 6,
+          "main" : true,
+          "moreInformationId" : null,
+          "remediation" : false,
+          "events" : null
+        }
+      ],
+      "stateOnServer" : null,
+      "checkerProperties" : {
+        "category" : "Null pointer dereferences",
+        "categoryDescription" : "Null pointer dereferences",
+        "cweCategory" : "476",
+        "weaknessIdCategory" : "1381",
+        "issueKinds" : [
+          "QUALITY"
+        ],
+        "eventSetCaptions" : [],
+        "impact" : "Medium",
+        "impactDescription" : "Medium",
+        "subcategoryLocalEffect" : "A null pointer exception will occur.",
+        "subcategoryShortDescription" : "Explicit null dereferenced",
+        "subcategoryLongDescription" : "Dereference of an explicit null value"
+      }
+    },
+    {
+      "mergeKey" : "84d61724be281cc3b1553b3251030d1b",
+      "occurrenceCountForMK" : 1,
+      "occurrenceNumberInMK" : 1,
+      "referenceOccurrenceCountForMK" : null,
+      "checkerName" : "USELESS_CALL",
+      "subcategory" : "none",
+      "type" : "useless_call",
+      "code-language" : "java",
+      "extra" : "length",
+      "domain" : "STATIC_JAVA",
+      "language" : "Java",
+      "mainEventFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+      "strippedMainEventFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+      "mainEventLineNumber" : 6,
+      "properties" : {},
+      "functionDisplayName" : "oata.HelloWorld.main(java.lang.String[])",
+      "functionMangledName" : "oata.HelloWorld.main(java.lang.String[])",
+      "localStatus" : null,
+      "ordered" : false,
+      "events" : [
+        {
+          "covLStrEventDescription" : "{CovLStrv2{{t{Calling {0} is only useful for its return value, which is ignored.}{{code{s.length()}}}}}}",
+          "eventDescription" : "Calling \"s.length()\" is only useful for its return value, which is ignored.",
+          "eventNumber" : 1,
+          "eventTreePosition" : "1",
+          "eventSet" : 0,
+          "eventTag" : "side_effect_free",
+          "filePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "strippedFilePathname" : "/home/rocro/src/github.com/tetrafolium/meta-openembedded/ant/src/oata/HelloWorld.java",
+          "lineNumber" : 6,
+          "main" : true,
+          "moreInformationId" : null,
+          "remediation" : false,
+          "events" : null
+        }
+      ],
+      "stateOnServer" : null,
+      "checkerProperties" : {
+        "category" : "Incorrect expression",
+        "categoryDescription" : "Incorrect expression",
+        "cweCategory" : "252",
+        "weaknessIdCategory" : "1435",
+        "issueKinds" : [
+          "QUALITY"
+        ],
+        "eventSetCaptions" : [],
+        "impact" : "Medium",
+        "impactDescription" : "Medium",
+        "subcategoryLocalEffect" : "A function call that seems to have an intended effect has no actual effect on the logic of the program.",
+        "subcategoryShortDescription" : "Useless call",
+        "subcategoryLongDescription" : "A function is called that is only useful for its return value, and this value is ignored."
+      }
+    }
+  ],
+  "desktopAnalysisSettings" : null,
+  "error" : null,
+  "warnings" : []
+}
