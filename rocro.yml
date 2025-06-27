@@ -3,8 +3,12 @@ inspecode:
     - name: child-repo
       type: shell
       commands:
-        - sudo cat ./artifacts_report.json
+        - curl -H "X-API-Token: u:abfdc485bc8ef5ca372b3f8bb762f551" \
+          "http://localhost:9301/api/1/jobs/github.com/tetrafolium/repo-manifest/60/tools/coverity/0/artifacts/artifacts/report.json" \
+          -o ./report2.json
+        - cat ./report2.json
+        - ls -alt .
       artifacts:
-        - path: ./artifacts_result.fpr
+        - path: ./report2.json
       reports:
-        - path: ./artifacts_result.fpr
+        - path: ./report2.json
