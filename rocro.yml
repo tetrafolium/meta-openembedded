@@ -4,9 +4,15 @@ inspecode:
       type: shell
       commands:
         - ls -alt ./
-        - cd ./ant
+  coverity:
+    options:
+      --commands:
+        - export REPODIR=$(pwd)
+        - echo $REPODIR
+        - ls -alt $REPODIR
+        - cd $REPODIR/ant
         - cov-build --dir ~/cov-im --parallel-translate=1 ant
-      artifacts:
-        - path: ./report.sarif
-      reports:
-        - path: ./report.sarif
+    artifacts:
+      - path: ./report.json
+    reports:
+      - path: ./report.json
