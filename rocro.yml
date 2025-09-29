@@ -5,9 +5,8 @@ inspecode:
       commands:
         main:
           - echo "hello"
-          - 'curl -L -H "X-API-Token: u:abfdc485bc8ef5ca372b3f8bb762f551" "http://43.0.48.59:9301/api/1/jobs/github.com/tetrafolium/repo-manifest/61/tasks/child-repo/artifacts/report.sarif" -o ./report.sarif'
-          - cat ./report.sarif
+          - cat ./report.json
       artifacts:
-        - path: ./report.sarif
+        - path: ./report.json
       reports:
-        - path: ./report.sarif
+        - path: ./report.json
