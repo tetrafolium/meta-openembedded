@@ -5,6 +5,11 @@ public class HelloWorld {
         System.out.println("Hello World");
     }
 
+    public static int triggerForwardedNullDerefFromManifest() {
+        String value = CoverityNullDeref.runCrossRepoNullDerefScenario();
+        return triggerForwardedNullDeref(value);
+    }
+
     public static int triggerForwardedNullDeref(String value) {
         return value.length();
     }
