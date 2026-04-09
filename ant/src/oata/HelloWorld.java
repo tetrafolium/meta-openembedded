@@ -11,6 +11,7 @@ public class HelloWorld {
     }
 
     public static int triggerForwardedNullDeref(String value) {
-        return value.length();
+        CrossRepoSink.consume(value);
+        return 0;
     }
 }
