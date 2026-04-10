@@ -1,0 +1,3 @@
+[submodule "sel4test-manifest"]
+	path = sel4test-manifest
+	url = https://github.com/tetrafolium/sel4test-manifest.git
